@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="public/assets/css/style.css" />
+    <title>Shipping Address</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="text-center p-4">
+        <h1>CHECKOUT</h1>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-lg-9">
+          <form method="POST" action="" class="needs-validation" novalidate>
+            <div class="row">
+              <div class="col-12 col-md-7">
+                <h2 class="h4 fw-bold text-center mb-3 checkout-title">
+                  Shipping Address
+                </h2>
+
+                <div class="position-relative mb-4">
+                  <label
+                    for="name"
+                    class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                  >
+                    Name <span class="text-danger">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    name="name"
+                    id="name"
+                    class="form-control p-2"
+                    placeholder="Enter your name"
+                    autocomplete="name"
+                    maxlength="100"
+                    required
+                  />
+
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+
+                <div class="position-relative mb-4">
+                  <label
+                    for="phone"
+                    class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                  >
+                    Phone <span class="text-danger">*</span>
+                  </label>
+
+                  <input
+                    type="tel"
+                    name="phone"
+                    id="phone"
+                    class="form-control p-2"
+                    placeholder="+8801XXXXXXXXX"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    maxlength="20"
+                    required
+                  />
+
+                  <div class="invalid-feedback">
+                    Please enter a valid phone number.
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <div class="position-relative mb-4">
+                      <label
+                        for="country"
+                        class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                      >
+                        Country
+                        <span class="text-danger">*</span>
+                      </label>
+
+                      <select
+                        name="country"
+                        id="country"
+                        class="form-select p-2"
+                        autocomplete="country"
+                        required
+                      >
+                        <option value="" selected disabled hidden>
+                          Select country
+                        </option>
+
+                        <option value="BD">Bangladesh</option>
+
+                        <option value="IN">India</option>
+                      </select>
+
+                      <div class="invalid-feedback">
+                        Please select your country.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="position-relative mb-4">
+                      <label
+                        for="division"
+                        class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                      >
+                        Division
+                        <span class="text-danger">*</span>
+                      </label>
+
+                      <select
+                        name="division"
+                        id="division"
+                        class="form-select p-2"
+                        autocomplete="address-level1"
+                        required
+                      >
+                        <option value="" selected disabled hidden>
+                          Select division
+                        </option>
+                      </select>
+
+                      <div class="invalid-feedback">
+                        Please select your division.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <div class="position-relative mb-4">
+                      <label
+                        for="district"
+                        class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                      >
+                        District
+                        <span class="text-danger">*</span>
+                      </label>
+
+                      <select
+                        name="district"
+                        id="district"
+                        class="form-select p-2"
+                        required
+                      >
+                        <option value="" selected disabled hidden>
+                          Select district
+                        </option>
+                      </select>
+
+                      <div class="invalid-feedback">
+                        Please select your district.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="position-relative mb-4">
+                      <label
+                        for="thana"
+                        class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                      >
+                        Thana
+                        <span class="text-danger">*</span>
+                      </label>
+
+                      <select
+                        name="thana"
+                        id="thana"
+                        class="form-select p-2"
+                        required
+                      >
+                        <option value="" selected disabled hidden>
+                          Select thana
+                        </option>
+                      </select>
+
+                      <div class="invalid-feedback">
+                        Please select your thana / upazila.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row g-3">
+                  <div class="col-12 col-md-6">
+                    <label for="area" class="form-label">Area *</label>
+                    <select
+                      name="area"
+                      id="area"
+                      class="form-select"
+                      disabled
+                      required
+                    >
+                      <option value="">Select Area</option>
+                    </select>
+                  </div>
+
+                  <div class="col-12 col-md-6">
+                    <div class="position-relative mb-4">
+                      <label
+                        for="postal_code"
+                        class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                      >
+                        Post Code
+                        <span class="text-danger">*</span>
+                      </label>
+
+                      <input
+                        type="text"
+                        name="postal_code"
+                        id="postal_code"
+                        class="form-control"
+                        readonly
+                        required
+                        placeholder="Postal Code"
+                      />
+
+                      <div class="invalid-feedback">
+                        Please enter your postal code.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="position-relative mb-0">
+                  <label
+                    for="street_address"
+                    class="position-absolute top-0 start-0 translate-middle-y ms-3 px-2 bg-white small fw-bold z-1"
+                  >
+                    Street Address
+                    <span class="text-danger">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    name="street_address"
+                    id="street_address"
+                    class="form-control p-2"
+                    placeholder="House number, road, building"
+                    autocomplete="street-address"
+                    maxlength="255"
+                    required
+                  />
+
+                  <div class="invalid-feedback">
+                    Please enter your street address.
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12 col-md-5">
+                <h2 class="h4 fw-bold text-center mb-3 checkout-title">
+                  Payment Method
+                </h2>
+
+                <!-- bKash -->
+                <div class="border p-2 mb-3">
+                  <div
+                    class="form-check d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        id="bkash"
+                        value="bkash"
+                        required
+                      />
+
+                      <label class="form-check-label ms-2" for="bkash">
+                        bKash
+                      </label>
+                    </div>
+
+                    <span class="badge bg-danger fs-6"> bKash </span>
+                  </div>
+                </div>
+
+                <!-- Nagad -->
+                <div class="border p-2 mb-3">
+                  <div
+                    class="form-check d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        id="nagad"
+                        value="nagad"
+                      />
+
+                      <label class="form-check-label ms-2" for="nagad">
+                        Nagad
+                      </label>
+                    </div>
+
+                    <span class="badge bg-warning text-dark fs-6"> Nagad </span>
+                  </div>
+                </div>
+
+                <!-- Rocket -->
+                <div class="border p-2 mb-3">
+                  <div
+                    class="form-check d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        id="rocket"
+                        value="rocket"
+                      />
+
+                      <label class="form-check-label ms-2" for="rocket">
+                        Rocket
+                      </label>
+                    </div>
+
+                    <span class="badge bg-primary fs-6"> Rocket </span>
+                  </div>
+                </div>
+
+                <!-- Bank Transfer -->
+                <div class="border p-2 mb-3">
+                  <div
+                    class="form-check d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        id="bank"
+                        value="bank"
+                      />
+
+                      <label class="form-check-label ms-2" for="bank">
+                        Bank Transfer
+                      </label>
+                    </div>
+
+                    <span class="badge bg-secondary fs-6"> Bank </span>
+                  </div>
+                </div>
+
+                <!-- Stripe -->
+                <div class="border p-2 mb-3">
+                  <div
+                    class="form-check d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        id="stripe"
+                        value="stripe"
+                      />
+
+                      <label class="form-check-label ms-2" for="stripe">
+                        Stripe
+                      </label>
+                    </div>
+
+                    <div>
+                      <span class="badge bg-primary"> VISA </span>
+
+                      <span class="badge bg-dark"> Mastercard </span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="border p-2 mb-0">
+                  <div
+                    class="form-check d-flex justify-content-between align-items-center"
+                  >
+                    <div>
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="payment_method"
+                        id="cash"
+                        value="cash"
+                      />
+
+                      <label class="form-check-label ms-2" for="cash">
+                        Cash on Delivery
+                      </label>
+                    </div>
+
+                    <span class="badge bg-success fs-6"> Cash </span>
+                  </div>
+                </div>
+
+                <!-- Payment Validation -->
+                <div class="invalid-feedback d-block">
+                  Please select a payment method.
+                </div>
+
+                <!-- Submit Button -->
+                <!-- No margin/gap/padding above -->
+                <button type="submit" class="btn btn-success ms-auto">
+                  Place Order
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <div class="col-12 col-lg-3">
+          <div class="border p-3">
+            <h2 class="h5 fw-bold mb-3">Order Summary</h2>
+
+            <!-- Example -->
+            <div class="d-flex justify-content-between mb-2">
+              <span>Subtotal</span>
+              <span>৳0.000</span>
+            </div>
+
+            <div class="d-flex justify-content-between mb-2">
+              <span>Delivery</span>
+              <span>৳0.00</span>
+            </div>
+
+            <hr />
+
+            <div class="d-flex justify-content-between fw-bold">
+              <span>Total</span>
+              <span>৳0,00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="public/assets/js/index.js"></script>
+  </body>
+</html>
