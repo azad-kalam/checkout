@@ -442,17 +442,51 @@
               <span>৳0,00</span>
             </div>
 
-            <div class="d-flex justify-content-between mb-2">
-              <span>Shipping Charge [Inside Dhaka]</span>
-              <span>৳0.00</span>
-            </div>
-            <div class="d-flex justify-content-between mb-2">
-              <span>Shipping Charge [Outside Dhaka]</span>
-              <span>৳0.00</span>
+            <div class="mb-3">
+              <label class="form-label text-warning"
+                >Choose shipping charge for delivery</label
+              >
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input border border-1 border-danger"
+                    type="radio"
+                    name="shipping_charge"
+                    id="inside_dhaka"
+                    value="0"
+                    checked
+                  />
+                  <small class="form-check-label" for="inside_dhaka">
+                    Shipping Charge (Inside Dhaka)
+                  </small>
+                </div>
+                <span>৳0.00</span>
+              </div>
+
+              <div
+                class="d-flex justify-content-between align-items-center mb-2"
+              >
+                <div class="form-check">
+                  <input
+                    class="form-check-input border border-1 border-danger"
+                    type="radio"
+                    name="shipping_charge"
+                    id="outside_dhaka"
+                    value="0"
+                  />
+                  <small class="form-check-label" for="outside_dhaka">
+                    Shipping Charge (Outside Dhaka)
+                  </small>
+                </div>
+                <span>৳0.00</span>
+              </div>
             </div>
 
             <div class="d-flex justify-content-between mb-2">
-              <span>VAT [Included]</span>
+              <small>VAT (Included in Price)</small>
               <span>৳0.00</span>
             </div>
 
